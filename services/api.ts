@@ -4,8 +4,8 @@ import axios from 'axios';
 // VARIÁVEIS DE AMBIENTE (CORREÇÃO DE NOMES)
 // ----------------------------------------------------
 
-const AUTH_API_URL = process.env.AUTH_API_BASE_URL;
-const MAIN_API_URL = process.env.MAIN_API_BASE_URL;
+const AUTH_API_URL = process.env.NEXT_PUBLIC_AUTH_API_BASE_URL;
+const MAIN_API_URL = process.env.NEXT_PUBLIC_MAIN_API_BASE_URL;
 
 // Cria a instância do axios para o SERVIÇO PRINCIPAL (Vacinas, Histórico, etc.)
 const mainApi = axios.create({
