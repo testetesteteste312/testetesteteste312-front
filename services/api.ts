@@ -109,7 +109,7 @@ export const authService = {
   async login(email: string, senha: string): Promise<Usuario> {
     try {
       // 🚨 Login usa o authApi e envia no body do POST (FastAPI padrão)
-      const response = await authApi.post('/usuarios/login', { email, senha });
+      const response = await authApi.post('/auth/login', { email, senha });
       
       const UsuarioData = response.data;
       if (typeof window !== 'undefined') {
@@ -125,11 +125,11 @@ export const authService = {
   async register(nome: string, email: string, senha: string): Promise<Usuario> {
     try {
       // Registro usa o authApi e envia no body do POST
-      const response = await authApi.post('/usuarios/', {
-        nome,
-        email,
-        senha,
-      });
+      const response = await authApi.post('/auth/register', {
+      nome,
+      email,
+      senha,
+    });
       const UsuarioData = response.data;
       if (typeof window !== 'undefined') {
         // Registro bem-sucedido pode ou não retornar o token, mas salvamos os dados
