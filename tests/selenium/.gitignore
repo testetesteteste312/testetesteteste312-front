@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.log
+venv/
+env/
+
+# Reports
+reports/
+screenshots/
+*.html
+*.xml
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea
+
+check_setup.py
